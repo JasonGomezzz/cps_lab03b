@@ -15,4 +15,14 @@ public class StudentRepository {
     public List<StudentEntity> getAllStudents() {
         return students;
     }
+
+    // NUEVO
+    public StudentEntity findById(int id) {
+        for (StudentEntity s : students) {
+            if (s.getId() == id) {
+                return s;
+            }
+        }
+        return null;
+    }
 }
