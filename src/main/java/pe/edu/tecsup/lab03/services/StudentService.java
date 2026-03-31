@@ -16,4 +16,9 @@ public class StudentService {
     public List<StudentEntity> listStudents() {
         return repository.getAllStudents();
     }
+
+    // NUEVO
+    public StudentEntity getStudentById(int id) {
+        return repository.findById(id);
+    }
 }
